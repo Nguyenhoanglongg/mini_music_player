@@ -113,6 +113,54 @@ const app = {
       path: "./assets/music/Nếu Ngày Ấy - SOOBIN.mp3",
       image: "./assets/img/neungayay.jpg",
     },
+    {
+      name: "2AM",
+      singer: "JustaTee x Big Daddy",
+      path: "./assets/music/2AM-JustaTee-BigDaddy.mp3",
+      image: "./assets/img/2am.jpg",
+    },
+    {
+      name: "QUERRY",
+      singer: "QNT - Trung Tran - MCK",
+      path: "./assets/music/Querry-QNT-Trung-Tran-MCK.mp3",
+      image: "./assets/img/querry.jpg",
+    },
+    {
+      name: "Thích quá rùi nà",
+      singer: "tlinh - Trung Tran - MCK - Wxrdie - PhongKhin",
+      path: "./assets/music/Thich-Qua-Rui-Na-tlinh-Trung-Tran-Wxrdie-MCK-Phongkhin.mp3",
+      image: "./assets/img/thichquaruina.jpg",
+    },
+    {
+      name: "XTC",
+      singer: "Groovie - MCK - Tlinh",
+      path: "./assets/music/XTC-Xich-Them-Chut-Remix-Rapital-Groovie-tlinh-MCK.mp3",
+      image: "./assets/img/xtc.jpg",
+    },
+    {
+      name: "Những ngày vắng em",
+      singer: "Thái Đinh",
+      path: "./assets/music/Nhung-Ngay-Vang-Em-Thai-Dinh.mp3",
+      image: "./assets/img/thaidinh.jpg",
+    },
+    {
+      name: "Đi qua mùa hạ",
+      singer: "Thái Đinh",
+      path: "./assets/music/diquamuaha.mp3",
+      image: "./assets/img/thaidinh.jpg",
+    },
+    {
+      name: "Và thế giới đã mất đi một người cô đơn",
+      singer: "Groovie - MCK - Tlinh",
+      path: "./assets/music/VA-THE-GIOI-DA-MAT-DI-MOT-NGUOI-CO-DON-marzuz-Gill-Onionn.mp3",
+      image: "./assets/img/vathegioidamatdi.jpg",
+    },
+    {
+      name: "NO INTERNET",
+      singer: "7UPPERCUT x Seachains",
+      path: "./assets/music/nointernet.mp3",
+      image: "./assets/img/nointernet.jpg",
+    },
   ],
   render: function () {
     const htmls = this.song.map((song, index) => {
