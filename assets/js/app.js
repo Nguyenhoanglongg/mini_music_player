@@ -34,6 +34,7 @@ const volumeProgress = $(".volume-progress");
 const volumeBlock = $(".volume-block");
 const timeStart = $(".progress-start-time");
 const timeEnd = $(".progress-start-end");
+
 const app = {
   currentIndex: 0,
   isPlaying: false,
@@ -282,6 +283,7 @@ const app = {
         }
       }
     };
+
     // Icon volume active
     volumeHigh.onclick = function () {
       volumeHigh.style.display = "none";
@@ -319,6 +321,7 @@ const app = {
         volumeMute.style.display = "none";
       }
     };
+
     // Khi tua volume điện thoại
     volumeProgress.ontouchmove = function () {
       audio.volume = volumeProgress.value / 100;

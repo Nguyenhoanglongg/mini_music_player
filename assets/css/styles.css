@@ -11,6 +11,9 @@
 
 body {
   background-color: #f5f5f5;
+  background-image: url(/assets/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html {
@@ -63,7 +66,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   padding: 16px 16px 14px;
-  background-color: #fff;
+  background-color: transparent;
   margin-bottom: 10px;
   padding: 16px 16px 14px;
   position: fixed;
@@ -72,7 +75,7 @@ html {
   max-width: 480px;
   z-index: 2;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px rgba(170, 12, 12, 0.8);
+  -webkit-box-shadow: 0 0 10px rgba(133, 245, 85, 1);
 }
 
 /* HEADER */
@@ -87,7 +90,7 @@ header h4 {
 }
 
 header h2 {
-  color: var(--text-color);
+  color: #fff;
   font-size: 20px;
 }
 
@@ -105,7 +108,7 @@ header h2 {
   background-color: #333;
   background-size: cover;
   margin: auto;
-  border: solid 1.5px black;
+  border: solid 0.5px #fff;
 }
 
 .volume-block {
@@ -178,6 +181,7 @@ header h2 {
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   cursor: pointer;
+  position: relative;
 }
 
 .progress:hover,
@@ -202,7 +206,7 @@ header h2 {
 }
 
 .progress-time {
-  color: #333333;
+  color: #fff;
   margin-top: 5px;
   display: flex;
   align-items: center;
@@ -236,6 +240,7 @@ header h2 {
   margin-bottom: 19px;
   padding: 8px 16px;
   border-radius: 20px;
+  border: solid 0.5px white;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
   cursor: pointer;
@@ -267,7 +272,7 @@ header h2 {
 
 .song .title {
   font-size: 18px;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .song .author {
