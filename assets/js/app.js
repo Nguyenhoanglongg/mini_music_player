@@ -292,6 +292,7 @@ const app = {
       audio.currentTime = seekTime;
       _this.startTimer(seekTime);
     };
+
     //Khi next bai hat
     nextBtn.onclick = function () {
       if (_this.isRandom) {
@@ -303,6 +304,21 @@ const app = {
       _this.render();
       _this.scrollToActiveSong();
     };
+    // Bind [ALT + 3] to next song
+    document.addEventListener("keydown", function (event) {
+      if (event.altKey && event.keyCode === 51) {
+        if (_this.isRandom) {
+          _this.playRandomSong();
+        } else {
+          _this.nextSong();
+        }
+        audio.play();
+        _this.render();
+        _this.scrollToActiveSong();
+      }
+    });
+
+    //Prev song
     prevBtn.onclick = function () {
       if (_this.isRandom) {
         _this.playRandomSong();
@@ -313,6 +329,20 @@ const app = {
       _this.render();
       _this.scrollToActiveSong();
     };
+    //Bind [ALT + 4] to Prev Song
+    document.addEventListener("keydown", function (event) {
+      if (event.altKey && event.keyCode === 52) {
+        if (_this.isRandom) {
+          _this.playRandomSong();
+        } else {
+          _this.prevSong();
+        }
+        audio.play();
+        _this.render();
+        _this.scrollToActiveSong();
+      }
+    });
+
     //xu ly random bai hat bat /tat random
     randomBtn.onclick = function (e) {
       _this.isRandom = !_this.isRandom;
