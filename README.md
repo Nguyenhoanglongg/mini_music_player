@@ -13,7 +13,9 @@ Shuffle song
 Repeat song
 
 # Bind key
-M : to Mute
+M: to Mute/Unmute
+
+Space: to Pause/Continue song
 
 ALT + 3: Next song
 
