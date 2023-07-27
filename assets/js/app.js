@@ -114,6 +114,12 @@ const app = {
       image: "./assets/img/neungayay.jpg",
     },
     {
+      name: "Vẫn nhớ",
+      singer: "SOOBIN",
+      path: "./assets/music/assets/music/Vẫn Nhớ-SOOBIN.mp3",
+      image: "./assets/img/vannho.jpg",
+    },
+    {
       name: "2AM",
       singer: "JustaTee x Big Daddy",
       path: "./assets/music/2AM-JustaTee-BigDaddy.mp3",
@@ -221,13 +227,28 @@ const app = {
     };
 
     // Xử lý click play
-    playBtn.onclick = function () {
+    playBtn.onclick = function togglePlay() {
       if (_this.isPlaying) {
         audio.pause();
       } else {
         audio.play();
       }
     };
+    // Press spacebar to pause/play song
+    function onKeyDown(event) {
+      switch (event.keyCode) {
+        case 32: //SpaceBar
+          if (_this.isPlaying) {
+            audio.pause();
+          } else {
+            audio.play();
+          }
+          break;
+      }
+      return false;
+    }
+
+    window.addEventListener("keydown", onKeyDown, false);
     // Khi song được play
     audio.onplay = function () {
       _this.isPlaying = true;
@@ -333,7 +354,7 @@ const app = {
     };
 
     // Icon volume active
-    volumeHigh.onclick = function () {
+    volumeHigh.onclick = function Mute() {
       volumeHigh.style.display = "none";
       volumeMute.style.display = "block";
       audio.volume = 0;
@@ -341,7 +362,7 @@ const app = {
     };
 
     // Icon volume off
-    volumeMute.onclick = function () {
+    volumeMute.onclick = function UnMute() {
       volumeHigh.style.display = "block";
       volumeMute.style.display = "none";
 
@@ -351,7 +372,31 @@ const app = {
       audio.volume = currentVolume;
       volumeProgress.value = currentVolume * 100;
     };
+    var isMuted = false;
 
+    function toggleMute() {
+      if (isMuted) {
+        audio.muted = false;
+        isMuted = false;
+        volumeHigh.style.display = "block";
+        volumeMute.style.display = "none";
+      } else {
+        audio.muted = true;
+        isMuted = true;
+        volumeHigh.style.display = "none";
+        volumeMute.style.display = "block";
+      }
+    }
+
+    document.onkeydown = function (e) {
+      if (e.keyCode == 77) {
+        toggleMute();
+      }
+      // function checkMute() {
+      //   alert(audio.muted);
+      // }
+      // console.log(checkMute());
+    };
     // Khi click vao thanh volume, thong so volume se thay doi theo
     volumeProgress.onclick = function () {
       audio.volume = volumeProgress.value / 100;
