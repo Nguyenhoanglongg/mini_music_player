@@ -113,12 +113,7 @@ const app = {
       path: "./assets/music/Nếu Ngày Ấy - SOOBIN.mp3",
       image: "./assets/img/neungayay.jpg",
     },
-    {
-      name: "Vẫn nhớ",
-      singer: "SOOBIN",
-      path: "./assets/music/assets/music/Vẫn Nhớ-SOOBIN.mp3",
-      image: "./assets/img/vannho.jpg",
-    },
+
     {
       name: "2AM",
       singer: "JustaTee x Big Daddy",
@@ -273,9 +268,7 @@ const app = {
     // Khi tiến độ bài hát thay đổi
     audio.ontimeupdate = function () {
       if (audio.duration) {
-        const progessPercent = Math.trunc(
-          (audio.currentTime / audio.duration) * 100
-        );
+        const progessPercent = (audio.currentTime / audio.duration) * 100;
         progress.value = progessPercent;
 
         _this.startTimer(audio.currentTime);
